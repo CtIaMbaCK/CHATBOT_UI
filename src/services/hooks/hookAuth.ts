@@ -1,4 +1,4 @@
-import { Protected, userLogin, userMe, userSignup } from "../apis/auth";
+import { Protected, userGoogleLogin, userLogin, userMe, userSignup } from "../apis/auth";
 import { useGetAPI, usePostAPI, usePutAPI } from "./hookApi";
 
 const useUserLogin = () => {
@@ -55,4 +55,18 @@ const useProtectedProtected = () => {
     setError,
   };
 };
-export { useProtectedProtected, useUserLogin, useUserMe,useUserSignup };
+const useUserGoogleLogin = () => {
+  const {
+    loading,
+    post: postUserGoogleLogin,
+    error,
+    setError,
+  } = usePostAPI(userGoogleLogin);
+  return {
+    loading,
+    postUserGoogleLogin,
+    error,
+    setError,
+  };
+};
+export { useProtectedProtected, useUserLogin, useUserMe,useUserSignup,useUserGoogleLogin };

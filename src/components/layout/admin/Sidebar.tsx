@@ -27,8 +27,8 @@ const drawerWidth = 240;
 const menuItems = [
     { text: 'Dashboard', icon: <DashboardIcon />, href: '/admin/dashboard' },
     { text: 'Users', icon: <PeopleIcon />, href: '/admin/users' },
-    { text: 'About', icon: <ShoppingCartIcon />, href: '/admin/about' },
-    { text: 'Database', icon: <SettingsIcon />, href: '/admin/database' },
+    // { text: 'About', icon: <ShoppingCartIcon />, href: '/admin/about' },
+    // { text: 'Database', icon: <SettingsIcon />, href: '/admin/database' },
     // { text: 'Settings', icon: <SettingsIcon />, href: '/admin/settings' },
 ];
 

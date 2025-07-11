@@ -18,3 +18,8 @@ export const Protected = async (body: any) => {
   return await get("/users/protected", body);
 };
 
+export const userGoogleLogin = async (idToken: string) => {
+  return await post("/auth/google", {
+    id_token: idToken,
+  });
+};

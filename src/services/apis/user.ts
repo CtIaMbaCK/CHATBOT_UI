@@ -12,10 +12,9 @@ export const createUser = async (body: any) => {
 
 export const updateUserById = async (body: any) => {
   const { id, ...data } = body;
-  return await put(`/users/${id}`, data);
+  return await put(`/admin/${id}`, data);
 };
 
-
 export const deleteUserById = async ({ id }: { id: string }) => {
-  return await _delete(`/users/${id}`);
+  return await _delete(`/admin/${id}`);
 };

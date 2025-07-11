@@ -40,7 +40,7 @@ export default function ForgotPasswordPage() {
         throw new Error(data.detail || "Lỗi gửi email");
       }
 
-      toast.success("📩 Đã gửi liên kết đặt lại mật khẩu. Vui lòng kiểm tra email.");
+      toast.success("Đã gửi liên kết đặt lại mật khẩu. Vui lòng kiểm tra email.");
       setSubmitted(true);
     } catch (err: any) {
       toast.error(err.message || "Đã có lỗi xảy ra");
@@ -52,7 +52,7 @@ export default function ForgotPasswordPage() {
   return (
     <Container maxWidth="sm" sx={{ mt: 8, textAlign: "center" }}>
       <Typography variant="h5" mb={3}>
-        🔐 Quên mật khẩu
+        Quên mật khẩu
       </Typography>
 
       {submitted ? (
