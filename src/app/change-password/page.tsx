@@ -71,6 +71,7 @@ export default function ChangePasswordPage() {
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
+      
       <Container maxWidth="sm" sx={{ mt: 8, textAlign: "center" }}>
         <Typography variant="h5" mb={3}>
           Đặt lại mật khẩu
@@ -127,6 +128,7 @@ export default function ChangePasswordPage() {
         )}
 
       </Container>
+
     </Suspense>
   );
 }

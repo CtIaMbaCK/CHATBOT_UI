@@ -115,7 +115,7 @@ export default function NewSection() {
                                 </Button>
                                 <Button
                                     component={Link}
-                                    href="/contact"
+                                    href="#"
                                     variant="outlined"
                                     sx={{
                                         borderColor: "#6263FF",
