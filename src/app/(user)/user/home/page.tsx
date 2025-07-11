@@ -17,6 +17,8 @@ export default function HomePage() {
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
       <NewSection />
       <Container maxWidth="xl">
+        <h1 className="text-center text-3xl font-bold my-8">
+          Giới Thiêu Về Văn Lang</h1>
         <VideoHero />
         <Achieve />
         <RoadPath />

@@ -1,10 +1,9 @@
 "use client";
 
-import { GoogleOAuthProvider } from '@react-oauth/google'; 
-import type { Metadata } from "next";
-import { Geist, Geist_Mono, Roboto } from "next/font/google";
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import { Roboto } from "next/font/google";
+import { EmotionProvider } from '../utils/emotion/provider';
 import "./globals.css";
-import { EmotionProvider } from '../components/emotion/provider';
 
 const roboto = Roboto({
   subsets: ["latin", "vietnamese"],
@@ -19,15 +18,6 @@ const roboto = Roboto({
     defer
   ></script>
 </head>
-const geistSans = Geist({
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const geistMono = Geist_Mono({
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export default function RootLayout({
   children,

@@ -35,6 +35,7 @@ export default function Chat() {
   const [loading, setLoading] = useState(false);
   const [inputText, setInputText] = useState("");
   const bottomRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLTextAreaElement>(null);
 
 
   const { postChatStudent } = useChatStudent();
@@ -75,6 +76,7 @@ export default function Chat() {
       ]);
     } finally {
       setLoading(false);
+      setTimeout(() => { inputRef.current?.focus() }, 0);
     }
   };
 
@@ -92,12 +94,12 @@ export default function Chat() {
         className="bg-[#B02E35] rounded-full w-14 h-14 fixed bottom-5 right-5 z-[1403] flex items-center justify-center"
         onClick={() => setIsVisible((v) => !v)}
         whileTap={{ scale: 0.9 }}
-        animate={{ y: [0, -10, 0] }}       
+        animate={{ y: [0, -10, 0] }}
         transition={{
-          duration: 1.5,               
-          repeat: Infinity,              
-          repeatType: "loop",           
-          ease: "easeInOut"                
+          duration: 1.5,
+          repeat: Infinity,
+          repeatType: "loop",
+          ease: "easeInOut"
         }}
         aria-label="Mở / đóng chat"
       >
@@ -240,6 +242,7 @@ export default function Chat() {
                     onChange={(e) => setInputText(e.target.value)}
                     onKeyDown={handleKeyDown}
                     disabled={loading}
+                    ref={inputRef}
                   />
 
                   <Box

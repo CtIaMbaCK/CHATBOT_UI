@@ -42,6 +42,7 @@ export default function ForgotPasswordPage() {
 
       toast.success("Đã gửi liên kết đặt lại mật khẩu. Vui lòng kiểm tra email.");
       setSubmitted(true);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       toast.error(err.message || "Đã có lỗi xảy ra");
     } finally {

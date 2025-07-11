@@ -26,116 +26,116 @@ const trainingItems = [
   },
 ];
 
-const RoadPath = () => (
-  <Box sx={{ my: 8 }}>
-    <Box
-      sx={{
-        maxWidth: { md: 1440 },
-        mx: "auto",
-        px: { xs: 2, md: 4 },
-      }}
-    >
-      <Typography
-        variant="h4"
-        fontWeight={700}
-        mb={4}
-        sx={{ fontSize: { xs: "1.6rem", md: "2.125rem" } }}
+export default function RoadPath() {
+  return (
+    <Box sx={{ my: 8 }}>
+      <Box
+        sx={{
+          maxWidth: { md: 1440 },
+          mx: "auto",
+          px: { xs: 2, md: 4 },
+        }}
       >
-        Chương trình đào tạo
-      </Typography>
+        <Typography
+          variant="h4"
+          fontWeight={700}
+          mb={4}
+          sx={{ fontSize: { xs: "1.6rem", md: "2.125rem" } }}
+        >
+          Chương trình đào tạo
+        </Typography>
 
-      <Grid
-        container
-        spacing={4}
-        justifyContent="space-around"
-        sx={{ flexDirection: { xs: "column", md: "row" } }}
-      >
-        {/* Cột ảnh chính */}
-        <Grid item xs={12} md={4}>
-          <motion.div
-            whileHover={{ scale: 1.02 }}
-            style={{ overflow: "hidden", borderRadius: 12 }}
-          >
-            <Link href="/dao-tao/dai-hoc">
-              <Image
-                src="/phan2.png"
-                alt="Chương trình Đại học"
-                width={1000}
-                height={600}
-                priority
-                sizes="(max-width: 768px) 100vw, 40vw"
-                style={{ width: "100%", height: "auto" }}
-              />
-            </Link>
-          </motion.div>
-        </Grid>
+        <Grid
+          container
+          spacing={4}
+          justifyContent="space-around"
+          sx={{ flexDirection: { xs: "column", md: "row" } }}
+        >
+          {/* Cột ảnh chính */}
+          <Grid item xs={12} md={4}>
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              style={{ overflow: "hidden", borderRadius: 12 }}
+            >
+              <Link href="/dao-tao/dai-hoc">
+                <Image
+                  src="/phan2.png"
+                  alt="Chương trình Đại học"
+                  width={1000}
+                  height={600}
+                  priority
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </Link>
+            </motion.div>
+          </Grid>
 
-        {/* Danh sách chương trình */}
-        <Grid item xs={12} md={6}>
-          {trainingItems.map((it, idx) => (
-            <Link key={idx} href={it.href} style={{ textDecoration: "none" }}>
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 220, damping: 18 }}
-                style={{ overflow: "hidden" }}
-              >
-                <Box
-                  sx={{
-                    display: "flex",
-                    gap: 2,
-                    py: 2,
-                    borderBottom:
-                      idx !== trainingItems.length - 1
-                        ? "1px solid #e0e0e0"
-                        : "none",
-                  }}
+          {/* Danh sách chương trình */}
+          <Grid item xs={12} md={6}>
+            {trainingItems.map((it, idx) => (
+              <Link key={idx} href={it.href} style={{ textDecoration: "none" }}>
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ type: "spring", stiffness: 220, damping: 18 }}
+                  style={{ overflow: "hidden" }}
                 >
-                  <Image
-                    src={it.thumb}
-                    alt={it.title}
-                    width={160}
-                    height={96}
-                    sizes="(max-width:768px) 40vw, 160px"
-                    style={{
-                      borderRadius: 8,
-                      objectFit: "cover",
-                      flexShrink: 0,
+                  <Box
+                    sx={{
+                      display: "flex",
+                      gap: 2,
+                      py: 2,
+                      borderBottom:
+                        idx !== trainingItems.length - 1
+                          ? "1px solid #e0e0e0"
+                          : "none",
                     }}
-                  />
-
-                  <Box>
-                    <Typography
-                      variant="overline"
-                      sx={{
-                        color: "#C1272D",
-                        fontWeight: 700,
-                        fontSize: { xs: "0.7rem", md: "0.8rem" },
+                  >
+                    <Image
+                      src={it.thumb}
+                      alt={it.title}
+                      width={160}
+                      height={96}
+                      sizes="(max-width:768px) 40vw, 160px"
+                      style={{
+                        borderRadius: 8,
+                        objectFit: "cover",
+                        flexShrink: 0,
                       }}
-                    >
-                      {it.tag}
-                    </Typography>
+                    />
 
-                    <Typography
-                      variant="subtitle1"
-                      sx={{
-                        color: "#000",
-                        fontWeight: 600,
-                        fontSize: { xs: "0.9rem", md: "1rem" },
-                      }}
-                    >
-                      {it.title.length > 90
-                        ? `${it.title.slice(0, 87)}…`
-                        : it.title}
-                    </Typography>
+                    <Box>
+                      <Typography
+                        variant="overline"
+                        sx={{
+                          color: "#C1272D",
+                          fontWeight: 700,
+                          fontSize: { xs: "0.7rem", md: "0.8rem" },
+                        }}
+                      >
+                        {it.tag}
+                      </Typography>
+
+                      <Typography
+                        variant="subtitle1"
+                        sx={{
+                          color: "#000",
+                          fontWeight: 600,
+                          fontSize: { xs: "0.9rem", md: "1rem" },
+                        }}
+                      >
+                        {it.title.length > 90
+                          ? `${it.title.slice(0, 87)}…`
+                          : it.title}
+                      </Typography>
+                    </Box>
                   </Box>
-                </Box>
-              </motion.div>
-            </Link>
-          ))}
+                </motion.div>
+              </Link>
+            ))}
+          </Grid>
         </Grid>
-      </Grid>
+      </Box>
     </Box>
-  </Box>
-);
-
-export default RoadPath;
+  );
+};

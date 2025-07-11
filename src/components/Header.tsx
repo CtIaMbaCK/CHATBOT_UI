@@ -43,6 +43,7 @@ const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const [loggedIn, setLoggedIn] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [user, setUser] = useState<any | undefined>(undefined);
   const { postProtectedProtected } = useProtectedProtected();
 
@@ -94,7 +95,7 @@ const Header = () => {
     { label: "Liên Hệ", href: "#" },
 
     loggedIn //thay doi duong dan
-      ? { label: "Chat Sinh Viên", href: "/tu-van" }  
+      ? { label: "Chat Sinh Viên",  href: "/tu-van" }  
       : { label: "Chat Tuyển Sinh", href: "/tu-van" }, 
   ];
 
@@ -160,7 +161,7 @@ const Header = () => {
                       }
                     }}
                   >
-                    {loggedIn ? "Đăng Xuất" : "Đăng Nhập"}
+                    {loggedIn ? "Đăng Xuất" : "Đăng Nhập Cho Sinh Viên"}
                   </Button>
                 )}
               </motion.div>

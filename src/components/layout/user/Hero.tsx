@@ -4,7 +4,7 @@ import { Box, Button, Card, Typography } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { useRouter } from "next/navigation";
 
-const VideoHero = () => {
+export default function VideoHero() {
   const router = useRouter();
 
   return (
@@ -53,7 +53,7 @@ const VideoHero = () => {
               fontSize: { xs: "0.6rem", md: "1.4rem" },
             }}
           >
-            Chatbot Văn Lang – trợ lý AI đồng hành 24/7, hỗ trợ tuyển sinh, học tập và đời sống sinh viên.
+            Văn Lang - nơi khơi nguồn tư duy sáng tạo, tạo đà cho những cải tiến đột phá. 
           </Typography>
 
           <Box
@@ -85,7 +85,7 @@ const VideoHero = () => {
                   "&:hover": { transform: "translateY(-2px) scale(1.05)" },
                 }}
               >
-                <Typography fontWeight={600}>Chat ngay với chúng tôi</Typography>
+                <Typography fontWeight={600}>Tìm hiểu thêm về chúng tôi</Typography>
                 <ArrowForwardIosIcon fontSize="small" />
               </Box>
             </Button>
@@ -95,5 +95,3 @@ const VideoHero = () => {
     </Box>
   );
 };
-
-export default VideoHero;

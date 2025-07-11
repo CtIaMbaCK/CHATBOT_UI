@@ -92,7 +92,7 @@ export default function ChatComponent() {
         maxWidth="xl"
         sx={{
           pt: "80px", 
-          pb: "120px", 
+          pb: "100px", 
           display: "flex",
           justifyContent: "center",
         }}
