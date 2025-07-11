@@ -36,7 +36,7 @@ export default function RegisterPage() {
       });
       toast.success("Đăng ký tài khoản thành công.");
       router.push("/login");
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       console.error(err);
       toast.error(
@@ -50,73 +50,78 @@ export default function RegisterPage() {
   };
 
   return (
-    <Container maxWidth="xs" sx={{ mt: 8, mb: 4 }}>
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        <Paper elevation={3} sx={{ p: 4, mt: 6 }}>
-          <Box component="form" onSubmit={handleSubmit} >
-            <Typography variant="h5" gutterBottom>
-              Đăng ký tài khoản
-            </Typography>
+    <Box sx={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
+      <Container maxWidth="xs">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <Paper elevation={3} sx={{ p: 4 }}>
+            <Box component="form" >
+              <Typography variant="h5" gutterBottom>
+                Đăng ký tài khoản
+              </Typography>
 
-            <TextField
-              fullWidth
-              label="Họ và tên"
-              name="full_name"
-              margin="normal"
-              required
-              value={form.full_name}
-              onChange={handleChange}
-            />
+              <TextField
+                fullWidth
+                label="Họ và tên"
+                name="full_name"
+                margin="normal"
+                required
+                value={form.full_name}
+                onChange={handleChange}
+               
+              />
 
-            <TextField
-              fullWidth
-              label="Email"
-              name="email"
-              type="email"
-              margin="normal"
-              required
-              value={form.email}
-              onChange={handleChange}
-            />
+              <TextField
+                fullWidth
+                label="Email"
+                name="email"
+                type="email"
+                margin="normal"
+                required
+                value={form.email}
+                onChange={handleChange}
+                
+              />
 
-            <TextField
-              fullWidth
-              label="Mật khẩu"
-              name="password"
-              type="password"
-              margin="normal"
-              required
-              value={form.password}
-              onChange={handleChange}
-            />
+              <TextField
+                fullWidth
+                label="Mật khẩu"
+                name="password"
+                type="password"
+                margin="normal"
+                required
+                value={form.password}
+                onChange={handleChange}
+               
+              />
 
-            <Button fullWidth type="submit" variant="contained" sx={{ mt: 2 }} color="error">
-              Đăng ký
-            </Button>
+              <button onClick={handleSubmit} className="w-full bg-red-600 mt-4 hover:bg-red-700 text-white font-semibold py-3 rounded transition duration-300">
+                Đăng ký
+              </button>
 
-            <Typography
-              variant="body2"
-              align="center"
-              sx={{
-                mt: 2,
-                color: "primary.main",
-                cursor: "pointer",
-                transition: "all 0.3s ease",
-                '&:hover': { color: '#1F2251' }
-              }}
-              onClick={() => router.push("/user/home")}
-            >
-              <ArrowLeftIcon fontSize="small" sx={{ verticalAlign: "middle" }} />
-              Trang chủ
-            </Typography>
+              <Typography
+                variant="body2"
+                align="center"
+                sx={{
+                  mt: 2,
+                  color: "primary.main",
+                  cursor: "pointer",
+                  transition: "all 0.3s ease",
+                  '&:hover': { color: '#1F2251' }
+                }}
+                onClick={() => router.push("/user/home")}
+              >
+                <ArrowLeftIcon fontSize="small" sx={{ verticalAlign: "middle" }} />
+                Trang chủ
+              </Typography>
 
-          </Box>
-        </Paper>
-      </motion.div>
-    </Container>
+            </Box>
+          </Paper>
+        </motion.div>
+      </Container>
+    </Box>
   );
 }

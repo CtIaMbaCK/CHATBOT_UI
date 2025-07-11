@@ -70,7 +70,7 @@ export default function VideoHero() {
               sàng tạo ra những đột phá sáng tạo.
             </Typography>
 
-            <Button onClick={() => router.push("/about")} variant="text" sx={{ mt: 2 }}>
+            <Button onClick={() => router.push("https://www.vlu.edu.vn/about-us/history-milestone")} variant="text" sx={{ mt: 2 }}>
               <Box
                 sx={{
                   bgcolor: "#B02E35",

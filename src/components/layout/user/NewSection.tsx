@@ -22,12 +22,14 @@ export default function NewSection() {
 
             {/* vid va backdrop */}
             <Box
+            
                 sx={{
                     position: "absolute",
                     inset: 0,
                     zIndex: -2,
                     pointerEvents: "none",
                     overflow: "hidden",
+                    
                 }}
             >
                 <video
@@ -41,6 +43,7 @@ export default function NewSection() {
                         height: "100%",
                         objectFit: "cover",
                     }}
+                    
                 />
 
                 <Box
@@ -93,7 +96,7 @@ export default function NewSection() {
                             >
                                 VLU CHATBOT
                                 <br />
-                                Trợ lý thông minh của sinh viên Văn Lang
+                                Trợ lý thông minh của Đại Học Văn Lang
                             </Typography>
 
                             <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
@@ -115,7 +118,7 @@ export default function NewSection() {
                                 </Button>
                                 <Button
                                     component={Link}
-                                    href="#"
+                                    href="https://www.vlu.edu.vn/about-us/history-milestone"
                                     variant="outlined"
                                     sx={{
                                         borderColor: "#6263FF",

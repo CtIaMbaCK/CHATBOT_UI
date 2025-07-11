@@ -5,6 +5,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <Box
+      id="footer"
       sx={{
         backgroundColor: "#131F32",
         color: "white",
@@ -13,6 +14,7 @@ export default function Footer() {
         width: "100%",
         zIndex: 1,
       }}
+
     >
       <Container sx={{ maxWidth: { md: 1440 } }}>
         <Grid container spacing={4} justifyContent="space-between">

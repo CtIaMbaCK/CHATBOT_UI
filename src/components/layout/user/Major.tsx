@@ -33,7 +33,7 @@ export default function Major() {
                         viewport={{ once: true, amount: 0.2 }}
                         transition={{ duration: 0.45, delay: i * 0.05 }}
                     >
-                        <Link onClick={()=> router.push('https://www.netlify.com/')}>
+                        <Link onClick={()=> router.push('https://tuyensinh.vlu.edu.vn/nganh-tuyen-sinh')}>
                             <Card
                                 sx={{
                                     display: "flex",

@@ -8,21 +8,21 @@ const trainingItems = [
     tag: "CHƯƠNG TRÌNH ĐẠI HỌC",
     title:
       "Chương trình toàn diện giúp hình thành và đẩy mạnh tư duy nghiên cứu ở người học, trang bị các kỹ năng hữu ích để phát triển sự nghiệp tương lai.",
-    href: "/dao-tao/dai-hoc",
+    href: "https://www.vlu.edu.vn/academics#ungraduate_programs_content",
   },
   {
     thumb: "/SDH.webp",
     tag: "CHƯƠNG TRÌNH SAU ĐẠI HỌC",
     title:
       "Chương trình đào tạo nâng cao, cung cấp tài nguyên học thuật và nghiên cứu phong phú để giúp người học tìm tòi sâu hơn vào lĩnh vực mong muốn.",
-    href: "/dao-tao/sau-dai-hoc",
+    href: "https://www.vlu.edu.vn/academics#graduate_programs_content",
   },
   {
     thumb: "/LKQT.webp",
     tag: "CHƯƠNG TRÌNH LIÊN KẾT QUỐC TẾ",
     title:
       "Chương trình tạo cơ hội cho người học nhận bằng cấp từ các đại học hàng đầu thế giới và có thêm trải nghiệm với tư cách một công dân toàn cầu.",
-    href: "/dao-tao/lien-ket-quoc-te",
+    href: "https://www.vlu.edu.vn/academics#international_programs_content",
   },
 ];
 
@@ -57,7 +57,7 @@ export default function RoadPath() {
               whileHover={{ scale: 1.02 }}
               style={{ overflow: "hidden", borderRadius: 12 }}
             >
-              <Link href="/dao-tao/dai-hoc">
+              <Link href="https://www.vlu.edu.vn/admissions/program/tuyen-sinh-dai-hoc">
                 <Image
                   src="/phan2.png"
                   alt="Chương trình Đại học"

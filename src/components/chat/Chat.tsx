@@ -219,10 +219,6 @@ export default function Chat() {
                     borderTop: "1px solid #ddd",
                   }}
                 >
-                  <AttachFileIcon
-                    sx={{ transform: "rotate(45deg)", cursor: "pointer" }}
-                    onClick={() => alert("Chức năng đính kèm đang phát triển")}
-                  />
 
                   <TextareaAutosize
                     placeholder="Nhập câu hỏi của bạn..."
