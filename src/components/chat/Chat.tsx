@@ -1,7 +1,6 @@
 "use client";
 
 import { useChatAdmin, useChatStudent } from "@/src/services/hooks/hookChat";
-import AttachFileIcon from "@mui/icons-material/AttachFile";
 import CancelIcon from "@mui/icons-material/Cancel";
 import SendIcon from "@mui/icons-material/Send";
 import {
@@ -91,7 +90,7 @@ export default function Chat() {
   return (
     <>
       <motion.button
-        className="bg-[#B02E35] rounded-full w-14 h-14 fixed bottom-5 right-5 z-[1403] flex items-center justify-center"
+        className="bg-[#B02E35] rounded-full w-14 h-14 fixed bottom-5 right-5 md:z-[1403] z-[1401] flex items-center justify-center"
         onClick={() => setIsVisible((v) => !v)}
         whileTap={{ scale: 0.9 }}
         animate={{ y: [0, -10, 0] }}
@@ -102,6 +101,7 @@ export default function Chat() {
           ease: "easeInOut"
         }}
         aria-label="Mở / đóng chat"
+        
       >
         {isVisible ? (
           <CancelIcon sx={{ color: "#fff" }} />
@@ -125,7 +125,7 @@ export default function Chat() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ type: "spring", stiffness: 220, damping: 20 }}
-              className="fixed z-[1402] inset-0 flex items-center justify-center"
+              className={`fixed z-[1402] inset-0 flex items-center justify-center`}
             >
               <Box
                 className="w-11/12 lg:w-[90%] h-[80vh] lg:h-[80%] bg-white rounded-2xl shadow-2xl flex flex-col"
@@ -221,6 +221,7 @@ export default function Chat() {
                 >
 
                   <TextareaAutosize
+                  
                     placeholder="Nhập câu hỏi của bạn..."
                     style={{
                       flex: 1,
@@ -231,6 +232,7 @@ export default function Chat() {
                       resize: "none",
                       fontSize: 14,
                       fontFamily: "inherit",
+                      outline: "none",
                     }}
                     minRows={1}
                     maxRows={3}
@@ -239,6 +241,7 @@ export default function Chat() {
                     onKeyDown={handleKeyDown}
                     disabled={loading}
                     ref={inputRef}
+                    color="black"
                   />
 
                   <Box

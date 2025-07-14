@@ -193,6 +193,7 @@ export default function ChatComponent() {
           disabled={loading}
           ref={inputRef}
           autoFocus
+          color="black"
         />
 
         <Box
