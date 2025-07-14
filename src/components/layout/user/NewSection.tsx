@@ -96,7 +96,7 @@ export default function NewSection() {
                             >
                                 VLU CHATBOT
                                 <br />
-                                Trợ lý thông minh của Đại Học Văn Lang
+                                Trợ lý thông minh của Đại Học Văn Lang TEST STSETWESRFD
                             </Typography>
 
                             <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
