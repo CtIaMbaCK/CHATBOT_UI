@@ -102,7 +102,7 @@ export default function ChatComponent() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           sx={{
-            width: { xs: "90vw", sm: 500, md: 1400 },
+            width: { xs: "90vw", sm: 500, md: 1000 },
             minHeight: "calc(100vh - 64px - 120px)",
             bgcolor: (theme) => alpha(theme.palette.grey[600], 0.6),
             backdropFilter: "blur(10px)",
@@ -160,7 +160,7 @@ export default function ChatComponent() {
           bottom: 24,
           left: "50%",
           transform: "translateX(-50%)",
-          width: { xs: "90vw", sm: 500, md: 1400 },
+          width: { xs: "90vw", sm: 500, md: 1000 },
           display: "flex",
           alignItems: "center",
           gap: 1,
@@ -184,6 +184,7 @@ export default function ChatComponent() {
             outline: "none",
             fontSize: 14,
             fontFamily: "inherit",
+            color: "#000",
           }}
           minRows={1}
           maxRows={4}
