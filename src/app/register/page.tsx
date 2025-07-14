@@ -12,6 +12,7 @@ import {
   Typography,
   Box,
   Paper,
+  Divider,
 } from "@mui/material";
 import { useUserSignup } from "@/src/services/hooks/hookAuth";
 
@@ -71,7 +72,7 @@ export default function RegisterPage() {
                 required
                 value={form.full_name}
                 onChange={handleChange}
-               
+
               />
 
               <TextField
@@ -83,7 +84,7 @@ export default function RegisterPage() {
                 required
                 value={form.email}
                 onChange={handleChange}
-                
+
               />
 
               <TextField
@@ -95,12 +96,25 @@ export default function RegisterPage() {
                 required
                 value={form.password}
                 onChange={handleChange}
-               
+
               />
 
               <button onClick={handleSubmit} className="w-full bg-red-600 mt-4 hover:bg-red-700 text-white font-semibold py-3 rounded transition duration-300">
                 Đăng ký
               </button>
+
+              <Divider sx={{ my: 3 }}>hoặc</Divider>
+
+              <Typography variant="body2" align="center" sx={{ mt: 3 }}>
+                Bạn đã có tài khoản?{" "}
+                <Box
+                  component="span"
+                  sx={{ color: "primary.main", cursor: "pointer" }}
+                  onClick={() => router.push("/login")}
+                >
+                  Đăng nhập
+                </Box>
+              </Typography>
 
               <Typography
                 variant="body2"
