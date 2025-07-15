@@ -110,7 +110,9 @@ export default function News() {
                       gutterBottom
                       sx={{ fontSize: { xs: "0.95rem", md: "1rem" } }}
                     >
-                      {n.title}
+                      {n.title.length > 50
+                        ? `${n.title.slice(0, 50)}…`
+                        : n.title}
                     </Typography>
 
                     <Box
