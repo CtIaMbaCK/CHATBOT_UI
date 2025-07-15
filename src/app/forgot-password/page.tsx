@@ -42,7 +42,7 @@ export default function ForgotPasswordPage() {
 
       toast.success("Đã gửi liên kết đặt lại mật khẩu. Vui lòng kiểm tra email.");
       setSubmitted(true);
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       toast.error(err.message || "Đã có lỗi xảy ra");
     } finally {
@@ -51,36 +51,38 @@ export default function ForgotPasswordPage() {
   };
 
   return (
-    <Container maxWidth="sm" sx={{ mt: 8, textAlign: "center" }}>
-      <Typography variant="h5" mb={3}>
-        Quên mật khẩu
-      </Typography>
+    <Box sx={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
+      <Container maxWidth="sm" sx={{ mt: 8, textAlign: "center" }}>
+        <Typography variant="h5" mb={3}>
+          Quên mật khẩu
+        </Typography>
 
-      {submitted ? (
-        <Stack spacing={3} alignItems="center">
-          <Typography color="primary">
-            Liên kết đặt lại mật khẩu đã được gửi đến email của bạn.
-          </Typography>
-          <Button variant="outlined" onClick={() => router.push("/login")}>
-            Quay lại đăng nhập
-          </Button>
-        </Stack>
-      ) : (
-        <Box display="flex" flexDirection="column" gap={2}>
-          <TextField
-            type="email"
-            label="Nhập email của bạn"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            fullWidth
-            disabled={loading}
-          />
+        {submitted ? (
+          <Stack spacing={3} alignItems="center">
+            <Typography color="primary">
+              Liên kết đặt lại mật khẩu đã được gửi đến email của bạn.
+            </Typography>
+            <Button variant="outlined" onClick={() => router.push("/login")}>
+              Quay lại đăng nhập
+            </Button>
+          </Stack>
+        ) : (
+          <Box display="flex" flexDirection="column" gap={2}>
+            <TextField
+              type="email"
+              label="Nhập email của bạn"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              fullWidth
+              disabled={loading}
+            />
 
-          <Button variant="contained" onClick={handleSubmit} disabled={loading}>
-            {loading ? "Đang gửi..." : "Gửi mã đặt lại mật khẩu"}
-          </Button>
-        </Box>
-      )}
-    </Container>
+            <Button variant="contained" onClick={handleSubmit} disabled={loading}>
+              {loading ? "Đang gửi..." : "Gửi mã đặt lại mật khẩu"}
+            </Button>
+          </Box>
+        )}
+      </Container>
+    </Box>
   );
 }

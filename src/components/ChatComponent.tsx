@@ -75,6 +75,8 @@ export default function ChatComponent() {
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if(loading) return;
+
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
       handleSend();
@@ -191,7 +193,7 @@ export default function ChatComponent() {
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
           onKeyDown={handleKeyDown}
-          disabled={loading}
+          // disabled={loading}
           ref={inputRef}
           autoFocus
           color="black"

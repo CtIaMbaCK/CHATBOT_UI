@@ -1,20 +1,19 @@
 "use client";
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
-import { toast } from "react-toastify";
-import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
-import { motion } from "framer-motion";
-import {
-  Container,
-  TextField,
-  Button,
-  Typography,
-  Box,
-  Paper,
-  Divider,
-} from "@mui/material";
 import { useUserSignup } from "@/src/services/hooks/hookAuth";
+import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
+import {
+  Box,
+  Container,
+  Divider,
+  Paper,
+  TextField,
+  Typography
+} from "@mui/material";
+import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { toast } from "react-toastify";
 
 export default function RegisterPage() {
   const [form, setForm] = useState({
